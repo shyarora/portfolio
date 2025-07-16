@@ -1,7 +1,7 @@
-'use client'
+"use client";
 
-import { motion } from 'framer-motion'
-import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react'
+import { motion } from "framer-motion";
+import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -14,12 +14,12 @@ const Hero = () => {
             transition={{ duration: 0.6 }}
           >
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-primary-900 mb-6">
-              Hi, I'm{' '}
-              <span className="text-accent-600">Shyam Arora</span>
+              Hi, I'm <span className="text-accent-600">Shyam Arora</span>
             </h1>
             <p className="text-xl sm:text-2xl text-primary-600 mb-8 max-w-3xl mx-auto">
-              Full-Stack Developer passionate about creating exceptional digital experiences
-              with modern technologies
+              Software Engineer III with 7 years of expertise in frontend and
+              full-stack development, building scalable web applications and
+              developer tools
             </p>
           </motion.div>
 
@@ -30,7 +30,7 @@ const Hero = () => {
             className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12"
           >
             <a href="#contact" className="btn-primary">
-              Get In Touch
+              Connect
             </a>
             <a href="#projects" className="btn-secondary">
               View My Work
@@ -80,7 +80,7 @@ const Hero = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;

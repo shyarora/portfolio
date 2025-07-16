@@ -1,43 +1,47 @@
-'use client'
+"use client";
 
-import { motion } from 'framer-motion'
-import { ExternalLink, Github } from 'lucide-react'
+import { motion } from "framer-motion";
+import { ExternalLink, Github } from "lucide-react";
 
 const Projects = () => {
   const projects = [
     {
-      title: 'E-Commerce Platform',
-      description: 'A full-stack e-commerce solution with React, Node.js, and Stripe integration. Features include user authentication, product management, and order processing.',
-      image: '/api/placeholder/600/400',
-      technologies: ['React', 'Node.js', 'PostgreSQL', 'Stripe', 'Tailwind CSS'],
-      githubUrl: 'https://github.com/shyarora/ecommerce-platform',
-      liveUrl: 'https://ecommerce-demo.vercel.app',
+      title: "Web Terminal Application",
+      description:
+        "A full-stack web terminals application with xterm.js, ReactJS and Golang over WebSocket. Features multi-tab support, drag and drop, and minimize functionalities for enhanced developer experience.",
+      image: "/api/placeholder/600/400",
+      technologies: ["React", "Golang", "WebSocket", "xterm.js", "Docker"],
+      githubUrl: "https://github.com/shyarora",
+      liveUrl: "#",
     },
     {
-      title: 'Task Management App',
-      description: 'A collaborative task management application with real-time updates using Socket.io. Built with Next.js and MongoDB.',
-      image: '/api/placeholder/600/400',
-      technologies: ['Next.js', 'MongoDB', 'Socket.io', 'TypeScript', 'Framer Motion'],
-      githubUrl: 'https://github.com/shyarora/task-manager',
-      liveUrl: 'https://task-manager-demo.vercel.app',
+      title: "VSCode Extension Marketplace",
+      description:
+        "A full-stack internal VSCode extension marketplace with web portal, extension frontend, and GraphQL backend. Integrated feedback system with comments, likes, and issue tracking.",
+      image: "/api/placeholder/600/400",
+      technologies: ["React", "GraphQL", "Node.js", "TypeScript", "VSCode API"],
+      githubUrl: "https://github.com/shyarora",
+      liveUrl: "#",
     },
     {
-      title: 'Weather Dashboard',
-      description: 'A responsive weather dashboard that displays current weather and forecasts. Features location-based weather data and interactive charts.',
-      image: '/api/placeholder/600/400',
-      technologies: ['React', 'Chart.js', 'OpenWeather API', 'CSS Modules'],
-      githubUrl: 'https://github.com/shyarora/weather-dashboard',
-      liveUrl: 'https://weather-dashboard-demo.vercel.app',
+      title: "CLI Development Tool",
+      description:
+        "A command-line interface built with Golang and Cobra for the OneDevX platform to manage build, test, and space operations. Streamlines developer workflows and improves productivity.",
+      image: "/api/placeholder/600/400",
+      technologies: ["Golang", "Cobra CLI", "Docker", "Kubernetes", "DevOps"],
+      githubUrl: "https://github.com/shyarora",
+      liveUrl: "#",
     },
     {
-      title: 'Blog Platform',
-      description: 'A modern blog platform with markdown support, syntax highlighting, and SEO optimization. Built for developers and writers.',
-      image: '/api/placeholder/600/400',
-      technologies: ['Next.js', 'MDX', 'Prisma', 'MySQL', 'TailwindCSS'],
-      githubUrl: 'https://github.com/shyarora/blog-platform',
-      liveUrl: 'https://blog-platform-demo.vercel.app',
-    }
-  ]
+      title: "AI-Powered Chatbot",
+      description:
+        "A multilingual chatbot integrated with AI/ML REST APIs for customer support. Reduced support costs by 30% through intelligent automated responses and seamless escalation.",
+      image: "/api/placeholder/600/400",
+      technologies: ["React", "Node.js", "AI/ML APIs", "WebSocket", "NLP"],
+      githubUrl: "https://github.com/shyarora",
+      liveUrl: "#",
+    },
+  ];
 
   return (
     <section id="projects" className="py-20 bg-white">
@@ -51,7 +55,8 @@ const Projects = () => {
         >
           <h2 className="section-title">Featured Projects</h2>
           <p className="section-subtitle mx-auto">
-            Here are some of my recent projects that showcase my skills and experience
+            Here are some of my recent projects that showcase my skills and
+            experience
           </p>
         </motion.div>
 
@@ -67,7 +72,9 @@ const Projects = () => {
             >
               <div className="relative overflow-hidden">
                 <div className="w-full h-48 bg-gradient-to-br from-primary-100 to-primary-200 flex items-center justify-center">
-                  <span className="text-primary-400 font-mono">Project Preview</span>
+                  <span className="text-primary-400 font-mono">
+                    Project Preview
+                  </span>
                 </div>
                 <div className="absolute inset-0 bg-primary-900/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
                   <a
@@ -88,7 +95,7 @@ const Projects = () => {
                   </a>
                 </div>
               </div>
-              
+
               <div className="p-6">
                 <h3 className="text-xl font-bold text-primary-900 mb-3">
                   {project.title}
@@ -130,7 +137,7 @@ const Projects = () => {
         </motion.div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Projects
+export default Projects;

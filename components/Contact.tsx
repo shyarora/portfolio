@@ -1,30 +1,34 @@
-'use client'
+"use client";
 
-import { motion } from 'framer-motion'
-import { Mail, Phone, MapPin, Send } from 'lucide-react'
-import { useState } from 'react'
+import { motion } from "framer-motion";
+import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { useState } from "react";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  })
+    name: "",
+    email: "",
+    message: "",
+  });
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
+    e.preventDefault();
     // Handle form submission - for now, we'll just create a mailto link
-    const subject = `Contact from ${formData.name}`
-    const body = `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
-    window.location.href = `mailto:shyarora7@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
-  }
+    const subject = `Contact from ${formData.name}`;
+    const body = `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`;
+    window.location.href = `mailto:shyarora7@gmail.com?subject=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(body)}`;
+  };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
-    })
-  }
+      [e.target.name]: e.target.value,
+    });
+  };
 
   return (
     <section id="contact" className="py-20 bg-primary-50">
@@ -38,7 +42,8 @@ const Contact = () => {
         >
           <h2 className="section-title">Get In Touch</h2>
           <p className="section-subtitle mx-auto">
-            Let's discuss your next project or just say hello. I'm always open to new opportunities.
+            Connect with me to discuss technology, share insights, or explore
+            collaborative opportunities in software development.
           </p>
         </motion.div>
 
@@ -54,9 +59,9 @@ const Contact = () => {
               Let's Connect
             </h3>
             <p className="text-primary-600 mb-8">
-              I'm always interested in hearing about new projects and opportunities.
-              Whether you're a company looking to hire, or you're a fellow developer
-              wanting to connect, I'd love to hear from you.
+              Feel free to reach out if you'd like to connect, discuss
+              technology, or share ideas about software development and
+              innovation.
             </p>
 
             <div className="space-y-6">
@@ -66,7 +71,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-primary-900">Email</h4>
-                  <a 
+                  <a
                     href="mailto:shyarora7@gmail.com"
                     className="text-primary-600 hover:text-accent-600 transition-colors"
                   >
@@ -77,21 +82,11 @@ const Contact = () => {
 
               <div className="flex items-center gap-4">
                 <div className="p-3 bg-accent-100 text-accent-600 rounded-lg">
-                  <Phone size={24} />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-primary-900">Phone</h4>
-                  <span className="text-primary-600">Available upon request</span>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-4">
-                <div className="p-3 bg-accent-100 text-accent-600 rounded-lg">
                   <MapPin size={24} />
                 </div>
                 <div>
                   <h4 className="font-semibold text-primary-900">Location</h4>
-                  <span className="text-primary-600">Open to remote work</span>
+                  <span className="text-primary-600">India</span>
                 </div>
               </div>
             </div>
@@ -107,7 +102,10 @@ const Contact = () => {
           >
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-primary-700 mb-2">
+                <label
+                  htmlFor="name"
+                  className="block text-sm font-medium text-primary-700 mb-2"
+                >
                   Name
                 </label>
                 <input
@@ -123,7 +121,10 @@ const Contact = () => {
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-primary-700 mb-2">
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium text-primary-700 mb-2"
+                >
                   Email
                 </label>
                 <input
@@ -139,7 +140,10 @@ const Contact = () => {
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-primary-700 mb-2">
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-medium text-primary-700 mb-2"
+                >
                   Message
                 </label>
                 <textarea
@@ -166,7 +170,7 @@ const Contact = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;

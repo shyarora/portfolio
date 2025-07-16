@@ -1,31 +1,31 @@
-'use client'
+"use client";
 
-import { motion } from 'framer-motion'
-import { Code, Database, Globe, Smartphone } from 'lucide-react'
+import { motion } from "framer-motion";
+import { Code, Database, Globe, Smartphone } from "lucide-react";
 
 const About = () => {
   const skills = [
     {
       icon: <Globe className="w-8 h-8" />,
-      title: 'Frontend Development',
-      description: 'React, Next.js, TypeScript, Tailwind CSS',
+      title: "Frontend Development",
+      description: "ReactJS, NextJS, TypeScript, HTML5, CSS3, Redux, Recoil",
     },
     {
       icon: <Database className="w-8 h-8" />,
-      title: 'Backend Development',
-      description: 'Node.js, Express, PostgreSQL, MongoDB',
+      title: "Backend Development",
+      description: "Node.js, Golang, GraphQL, REST APIs",
     },
     {
       icon: <Code className="w-8 h-8" />,
-      title: 'Full-Stack Solutions',
-      description: 'End-to-end application development',
+      title: "DevOps & Tools",
+      description: "Docker, Kubernetes, Git, WebSocket, Socket.io",
     },
     {
       icon: <Smartphone className="w-8 h-8" />,
-      title: 'Mobile Development',
-      description: 'React Native, responsive design',
+      title: "Testing & Build Tools",
+      description: "Jest, Cypress, Webpack, Babel, CLI Tools (Golang Cobra)",
     },
-  ]
+  ];
 
   return (
     <section id="about" className="py-20 bg-white">
@@ -39,8 +39,9 @@ const About = () => {
         >
           <h2 className="section-title">About Me</h2>
           <p className="section-subtitle mx-auto">
-            I'm a passionate full-stack developer with expertise in modern web technologies.
-            I love building scalable applications that solve real-world problems.
+            Software Engineer III with 7 years of expertise in frontend and
+            full-stack development, building scalable web applications,
+            developer tools, and cloud-integrated platforms.
           </p>
         </motion.div>
 
@@ -60,9 +61,7 @@ const About = () => {
               <h3 className="text-lg font-semibold text-primary-900 mb-2">
                 {skill.title}
               </h3>
-              <p className="text-primary-600 text-sm">
-                {skill.description}
-              </p>
+              <p className="text-primary-600 text-sm">{skill.description}</p>
             </motion.div>
           ))}
         </div>
@@ -79,39 +78,42 @@ const About = () => {
               My Journey
             </h3>
             <p className="text-primary-600 mb-6">
-              With a strong foundation in computer science and years of hands-on experience,
-              I've developed a deep understanding of both frontend and backend technologies.
-              I'm passionate about writing clean, efficient code and staying up-to-date with
-              the latest industry trends.
+              With a Bachelor's degree in Computer Science from IP University
+              Delhi and 7 years of hands-on experience, I've specialized in
+              building developer tools, web terminals, and scalable
+              applications. Currently working as Software Engineer III at Cisco,
+              focusing on DevOps platforms and VSCode extensions.
             </p>
             <p className="text-primary-600 mb-6">
-              When I'm not coding, you can find me exploring new technologies, contributing
-              to open-source projects, or sharing knowledge with the developer community.
+              I'm passionate about developer productivity, real-time
+              communication systems, and creating tools that enhance the
+              development experience. My expertise spans from frontend
+              frameworks to backend services and DevOps practices.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-2 gap-4">
             <div className="card p-4 text-center">
-              <div className="text-2xl font-bold text-accent-600 mb-1">3+</div>
+              <div className="text-2xl font-bold text-accent-600 mb-1">7+</div>
               <div className="text-sm text-primary-600">Years Experience</div>
             </div>
             <div className="card p-4 text-center">
-              <div className="text-2xl font-bold text-accent-600 mb-1">20+</div>
-              <div className="text-sm text-primary-600">Projects Completed</div>
+              <div className="text-2xl font-bold text-accent-600 mb-1">3</div>
+              <div className="text-sm text-primary-600">Companies</div>
             </div>
             <div className="card p-4 text-center">
-              <div className="text-2xl font-bold text-accent-600 mb-1">10+</div>
+              <div className="text-2xl font-bold text-accent-600 mb-1">15+</div>
               <div className="text-sm text-primary-600">Technologies</div>
             </div>
             <div className="card p-4 text-center">
-              <div className="text-2xl font-bold text-accent-600 mb-1">5+</div>
-              <div className="text-sm text-primary-600">Happy Clients</div>
+              <div className="text-2xl font-bold text-accent-600 mb-1">10+</div>
+              <div className="text-sm text-primary-600">Projects Built</div>
             </div>
           </div>
         </motion.div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default About
+export default About;

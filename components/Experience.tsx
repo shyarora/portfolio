@@ -1,47 +1,49 @@
-'use client'
+"use client";
 
-import { motion } from 'framer-motion'
-import { Calendar, MapPin } from 'lucide-react'
+import { motion } from "framer-motion";
+import { Calendar, MapPin } from "lucide-react";
 
 const Experience = () => {
   const experiences = [
     {
-      title: 'Senior Full-Stack Developer',
-      company: 'Tech Solutions Inc.',
-      location: 'Remote',
-      period: '2023 - Present',
+      title: "Software Engineer III",
+      company: "Cisco",
+      location: "Bengaluru, India",
+      period: "July 2020 - Present",
       description: [
-        'Led development of scalable web applications using React, Node.js, and PostgreSQL',
-        'Implemented CI/CD pipelines and improved deployment efficiency by 40%',
-        'Mentored junior developers and conducted code reviews',
-        'Collaborated with cross-functional teams to deliver high-quality products'
-      ]
+        "Building a CLI using Golang and Cobra for the OneDevX platform to manage build, test, and space operations",
+        "Developed a full-stack Web Terminals application for the Spaces project with xterm.js, ReactJS and Golang over WebSocket, featuring multi-tab support, drag, and minimize functionalities",
+        "Created a Generic Persistent Terminal for VSCode using Node.js, node-pty, and socket.io, ensuring uninterrupted terminal sessions",
+        "Contributed to IDE-Chat, an internal AI-assisted coding extension for VSCode, similar to GitHub Copilot",
+        "Created a full-stack internal VSCode extension marketplace with a web portal, extension frontend, and GraphQL backend",
+        "Built a VSCode extension for handling long-running builds using Node.js and pseudo-terminal technology",
+      ],
     },
     {
-      title: 'Full-Stack Developer',
-      company: 'Digital Innovations LLC',
-      location: 'New York, NY',
-      period: '2022 - 2023',
+      title: "Software Engineer",
+      company: "Paytm",
+      location: "Noida, India",
+      period: "June 2019 - July 2020",
       description: [
-        'Developed and maintained multiple client-facing web applications',
-        'Built RESTful APIs and integrated third-party services',
-        'Optimized application performance resulting in 30% faster load times',
-        'Participated in agile development processes and sprint planning'
-      ]
+        "Developed a multilingual chatbot integrated with AI/ML REST APIs, reducing customer support costs by 30%",
+        "Revamped the 24x7 support section using a hybrid container, enhancing native feature support like camera and geolocation",
+        "Worked on improving customer support experience through innovative chat solutions",
+        "Collaborated with AI/ML teams to integrate intelligent features into customer service platforms",
+      ],
     },
     {
-      title: 'Frontend Developer',
-      company: 'Creative Web Studio',
-      location: 'San Francisco, CA',
-      period: '2021 - 2022',
+      title: "Software Engineer",
+      company: "Moonraft Innovation Labs",
+      location: "Gurgaon, India",
+      period: "August 2018 - June 2019",
       description: [
-        'Created responsive web interfaces using React and modern CSS frameworks',
-        'Collaborated with designers to implement pixel-perfect UI components',
-        'Improved accessibility standards across all company projects',
-        'Maintained and updated legacy codebases'
-      ]
-    }
-  ]
+        "Developed a data-driven Canvas Dashboard using ReactJS, Redux, Node.js, D3, and GraphQL",
+        "Implemented role-based authentication with T-Mobile SSO and followed test-driven development",
+        "Built interactive data visualizations and analytics dashboards for enterprise clients",
+        "Worked with modern frontend technologies and GraphQL APIs for efficient data management",
+      ],
+    },
+  ];
 
   return (
     <section id="experience" className="py-20 bg-primary-50">
@@ -92,7 +94,9 @@ const Experience = () => {
               <ul className="space-y-2">
                 {exp.description.map((item, i) => (
                   <li key={i} className="text-primary-600 flex items-start">
-                    <span className="text-accent-600 mr-2 mt-1.5 flex-shrink-0">•</span>
+                    <span className="text-accent-600 mr-2 mt-1.5 flex-shrink-0">
+                      •
+                    </span>
                     {item}
                   </li>
                 ))}
@@ -102,7 +106,7 @@ const Experience = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Experience
+export default Experience;

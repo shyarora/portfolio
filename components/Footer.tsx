@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Heart } from 'lucide-react'
+import { Github, Linkedin, Mail, Heart } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -8,7 +8,8 @@ const Footer = () => {
           <div className="mb-6 md:mb-0">
             <h3 className="text-xl font-bold mb-2">Shyam Arora</h3>
             <p className="text-primary-300">
-              Full-Stack Developer passionate about creating exceptional digital experiences
+              Full-Stack Developer passionate about creating exceptional digital
+              experiences
             </p>
           </div>
 
@@ -40,7 +41,8 @@ const Footer = () => {
 
         <div className="border-t border-primary-700 mt-8 pt-8 text-center">
           <p className="text-primary-300 flex items-center justify-center gap-2">
-            Built with <Heart size={16} className="text-red-400" /> using Next.js and Tailwind CSS
+            Built with <Heart size={16} className="text-red-400" /> using
+            Next.js and Tailwind CSS
           </p>
           <p className="text-primary-400 text-sm mt-2">
             © {new Date().getFullYear()} Shyam Arora. All rights reserved.
@@ -48,7 +50,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
