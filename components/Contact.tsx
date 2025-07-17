@@ -56,12 +56,11 @@ const Contact = () => {
             viewport={{ once: true }}
           >
             <h3 className="text-2xl font-bold text-primary-900 mb-6">
-              Let's Connect
+              Let&apos;s Connect
             </h3>
             <p className="text-primary-600 mb-8">
-              Feel free to reach out if you'd like to connect, discuss
-              technology, or share ideas about software development and
-              innovation.
+              Feel free to reach out if you&apos;d like to connect, discuss technology, 
+              or share ideas about software development and innovation.
             </p>
 
             <div className="space-y-6">

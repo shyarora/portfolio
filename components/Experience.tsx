@@ -57,7 +57,7 @@ const Experience = () => {
         >
           <h2 className="section-title">Experience</h2>
           <p className="section-subtitle mx-auto">
-            My professional journey and the amazing teams I've worked with
+            My professional journey and the amazing teams I&apos;ve worked with
           </p>
         </motion.div>
 

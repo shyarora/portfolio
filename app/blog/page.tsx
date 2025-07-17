@@ -11,7 +11,7 @@ export default function BlogPage() {
           <div className="text-center">
             <h1 className="section-title">Blog</h1>
             <p className="section-subtitle mx-auto mb-12">
-              Coming soon! This is where I'll share my thoughts, tutorials, and
+              Coming soon! This is where I&apos;ll share my thoughts, tutorials, and
               insights about web development and technology.
             </p>
 
@@ -20,7 +20,7 @@ export default function BlogPage() {
                 Blog Under Construction
               </h2>
               <p className="text-primary-600 mb-6">
-                I'm working on creating valuable content for the developer
+                I&apos;m working on creating valuable content for the developer
                 community. Stay tuned for articles about React, Next.js,
                 TypeScript, and more!
               </p>
