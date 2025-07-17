@@ -10,11 +10,12 @@ export const metadata: Metadata = {
     "Full-stack developer passionate about creating exceptional digital experiences.",
   keywords: "software developer, full-stack, react, node.js, typescript",
   authors: [{ name: "Shyam Arora" }],
+  metadataBase: new URL("https://shyarora.dev"),
   openGraph: {
     title: "Shyam Arora - Software Developer",
     description:
       "Full-stack developer passionate about creating exceptional digital experiences.",
-    url: "https://shyarora.github.io/portfolio",
+    url: "https://shyarora.dev",
     siteName: "Shyam Arora Portfolio",
     type: "website",
   },
