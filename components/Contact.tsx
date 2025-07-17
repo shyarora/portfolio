@@ -59,8 +59,9 @@ const Contact = () => {
               Let&apos;s Connect
             </h3>
             <p className="text-primary-600 mb-8">
-              Feel free to reach out if you&apos;d like to connect, discuss technology, 
-              or share ideas about software development and innovation.
+              Feel free to reach out if you&apos;d like to connect, discuss
+              technology, or share ideas about software development and
+              innovation.
             </p>
 
             <div className="space-y-6">

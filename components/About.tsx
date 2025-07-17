@@ -78,14 +78,17 @@ const About = () => {
               My Journey
             </h3>
             <p className="text-primary-600 mb-6">
-              With a Bachelor&apos;s degree in Computer Science from IP University Delhi and 7 years of hands-on
-              experience, I&apos;ve specialized in building developer tools, web terminals, and scalable applications.
-              Currently working as Software Engineer III at Cisco, focusing on DevOps platforms and VSCode extensions.
+              With a Bachelor&apos;s degree in Computer Science from IP
+              University Delhi and 7 years of hands-on experience, I&apos;ve
+              specialized in building developer tools, web terminals, and
+              scalable applications. Currently working as Software Engineer III
+              at Cisco, focusing on DevOps platforms and VSCode extensions.
             </p>
             <p className="text-primary-600 mb-6">
-              I&apos;m passionate about developer productivity, real-time communication systems, and creating tools
-              that enhance the development experience. My expertise spans from frontend frameworks to backend
-              services and DevOps practices.
+              I&apos;m passionate about developer productivity, real-time
+              communication systems, and creating tools that enhance the
+              development experience. My expertise spans from frontend
+              frameworks to backend services and DevOps practices.
             </p>
           </div>
 
