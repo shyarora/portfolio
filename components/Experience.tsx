@@ -1,109 +1,131 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Calendar, MapPin } from "lucide-react";
+import { Calendar, MapPin, Briefcase, ChevronRight, Sparkles } from "lucide-react";
+import type { ExperienceItem } from "@/types/portfolio";
 
-const Experience = () => {
-  const experiences = [
-    {
-      title: "Software Engineer III",
-      company: "Cisco",
-      location: "Bengaluru, India",
-      period: "July 2020 - Present",
-      description: [
-        "Building a CLI using Golang and Cobra for the OneDevX platform to manage build, test, and space operations",
-        "Developed a full-stack Web Terminals application for the Spaces project with xterm.js, ReactJS and Golang over WebSocket, featuring multi-tab support, drag, and minimize functionalities",
-        "Created a Generic Persistent Terminal for VSCode using Node.js, node-pty, and socket.io, ensuring uninterrupted terminal sessions",
-        "Contributed to IDE-Chat, an internal AI-assisted coding extension for VSCode, similar to GitHub Copilot",
-        "Created a full-stack internal VSCode extension marketplace with a web portal, extension frontend, and GraphQL backend",
-        "Built a VSCode extension for handling long-running builds using Node.js and pseudo-terminal technology",
-      ],
-    },
-    {
-      title: "Software Engineer",
-      company: "Paytm",
-      location: "Noida, India",
-      period: "June 2019 - July 2020",
-      description: [
-        "Developed a multilingual chatbot integrated with AI/ML REST APIs, reducing customer support costs by 30%",
-        "Revamped the 24x7 support section using a hybrid container, enhancing native feature support like camera and geolocation",
-        "Worked on improving customer support experience through innovative chat solutions",
-        "Collaborated with AI/ML teams to integrate intelligent features into customer service platforms",
-      ],
-    },
-    {
-      title: "Software Engineer",
-      company: "Moonraft Innovation Labs",
-      location: "Gurgaon, India",
-      period: "August 2018 - June 2019",
-      description: [
-        "Developed a data-driven Canvas Dashboard using ReactJS, Redux, Node.js, D3, and GraphQL",
-        "Implemented role-based authentication with T-Mobile SSO and followed test-driven development",
-        "Built interactive data visualizations and analytics dashboards for enterprise clients",
-        "Worked with modern frontend technologies and GraphQL APIs for efficient data management",
-      ],
-    },
-  ];
+interface ExperienceProps {
+  data: ExperienceItem[];
+}
 
+const Experience = ({ data }: ExperienceProps) => {
   return (
-    <section id="experience" className="py-20 bg-primary-50">
-      <div className="section-padding container-max">
+    <section id="experience" className="section relative overflow-hidden bg-dark-900/30">
+      {/* Background decorations */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-full bg-gradient-to-b from-transparent via-dark-700 to-transparent" />
+      <div className="absolute top-1/4 -right-64 w-[500px] h-[500px] bg-accent-500/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-1/4 -left-64 w-[500px] h-[500px] bg-secondary-500/5 rounded-full blur-3xl" />
+
+      <div className="section-padding container-max relative z-10">
+        {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="section-header"
         >
-          <h2 className="section-title">Experience</h2>
-          <p className="section-subtitle mx-auto">
-            My professional journey and the amazing teams I&apos;ve worked with
+          <span className="section-label">
+            <Briefcase size={14} />
+            Career Path
+          </span>
+          <h2 className="section-title">
+            Professional{" "}
+            <span className="gradient-text">Experience</span>
+          </h2>
+          <p className="section-subtitle">
+            Building impactful products at industry-leading companies
           </p>
         </motion.div>
 
-        <div className="space-y-12">
-          {experiences.map((exp, index) => (
+        {/* Timeline */}
+        <div className="relative max-w-4xl mx-auto">
+          {data.map((exp, index) => (
             <motion.div
-              key={index}
-              initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              key={exp.id}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="card p-8"
+              className="relative pl-8 md:pl-12 pb-12 last:pb-0"
             >
-              <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-4">
-                <div className="flex-1">
-                  <h3 className="text-xl font-bold text-primary-900 mb-2">
-                    {exp.title}
-                  </h3>
-                  <h4 className="text-lg font-semibold text-accent-600 mb-3">
-                    {exp.company}
-                  </h4>
+              {/* Timeline line */}
+              {index < data.length - 1 && (
+                <div className="absolute left-[11px] md:left-[15px] top-8 bottom-0 w-px bg-gradient-to-b from-accent-500/50 via-dark-700 to-dark-700" />
+              )}
+
+              {/* Timeline dot */}
+              <div className={`absolute left-0 md:left-1 top-1 w-6 h-6 rounded-full border-4 border-dark-900 z-10 ${
+                exp.current 
+                  ? "bg-accent-500 shadow-glow" 
+                  : "bg-dark-700"
+              }`}>
+                {exp.current && (
+                  <span className="absolute inset-0 rounded-full bg-accent-500 animate-ping opacity-75" />
+                )}
+              </div>
+
+              {/* Content Card */}
+              <div className={`card-hover p-6 md:p-8 ${exp.current ? "border-accent-500/30" : ""}`}>
+                {/* Header */}
+                <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-6">
+                  <div className="flex-1">
+                    <div className="flex items-center gap-3 mb-2">
+                      <h3 className="text-xl md:text-2xl font-bold text-white">
+                        {exp.title}
+                      </h3>
+                      {exp.current && (
+                        <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-medium bg-accent-500/20 text-accent-400 border border-accent-500/30">
+                          <Sparkles size={10} />
+                          Current
+                        </span>
+                      )}
+                    </div>
+                    <h4 className="text-lg font-semibold gradient-text">
+                      {exp.company}
+                    </h4>
+                  </div>
+
+                  <div className="flex flex-wrap gap-3 text-sm text-dark-400">
+                    <div className="flex items-center gap-1.5">
+                      <Calendar size={14} className="text-accent-400" />
+                      {exp.period}
+                    </div>
+                    <div className="flex items-center gap-1.5">
+                      <MapPin size={14} className="text-secondary-400" />
+                      {exp.location}
+                    </div>
+                  </div>
                 </div>
-                <div className="flex flex-col sm:flex-row sm:items-center gap-4 text-sm text-primary-600">
-                  <div className="flex items-center gap-1">
-                    <Calendar size={16} />
-                    {exp.period}
-                  </div>
-                  <div className="flex items-center gap-1">
-                    <MapPin size={16} />
-                    {exp.location}
-                  </div>
+
+                {/* Description */}
+                <ul className="space-y-3 mb-6">
+                  {exp.description.map((item, i) => (
+                    <li key={i} className="flex items-start gap-3 text-dark-300">
+                      <ChevronRight size={16} className="text-accent-500 mt-1 flex-shrink-0" />
+                      <span className="leading-relaxed">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                {/* Technologies */}
+                <div className="flex flex-wrap gap-2">
+                  {exp.technologies.map((tech) => (
+                    <span
+                      key={tech}
+                      className="tag-accent"
+                    >
+                      {tech}
+                    </span>
+                  ))}
                 </div>
               </div>
-              <ul className="space-y-2">
-                {exp.description.map((item, i) => (
-                  <li key={i} className="text-primary-600 flex items-start">
-                    <span className="text-accent-600 mr-2 mt-1.5 flex-shrink-0">
-                      •
-                    </span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
             </motion.div>
           ))}
         </div>
+
+        {/* Bottom Decoration */}
+        <div className="mt-16 line-gradient" />
       </div>
     </section>
   );

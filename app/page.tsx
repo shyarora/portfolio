@@ -5,16 +5,19 @@ import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { getPortfolioData } from "@/lib/api";
 
-export default function Home() {
+export default async function Home() {
+  const data = await getPortfolioData();
+
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen bg-dark-950">
       <Navbar />
-      <Hero />
-      <About />
-      <Experience />
-      <Projects />
-      <Contact />
+      <Hero data={data.hero} />
+      <About data={data.about} />
+      <Experience data={data.experiences} />
+      <Projects data={data.projects} />
+      <Contact data={data.contact} />
       <Footer />
     </main>
   );
