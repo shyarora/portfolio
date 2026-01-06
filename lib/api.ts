@@ -1,12 +1,10 @@
 import type { PortfolioData, HeroData, AboutData, ExperienceItem, Project, ContactInfo } from '@/types/portfolio';
 
-const API_BASE_URL = process.env.NODE_ENV === 'production' 
-  ? 'https://api.shyarora.dev' 
-  : 'http://localhost:3001';
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'https://api.shyarora.dev';
 
 async function fetchAPI<T>(endpoint: string): Promise<T> {
   const res = await fetch(`${API_BASE_URL}${endpoint}`, {
-    next: { revalidate: 3600 } // Cache for 1 hour
+    cache: 'no-store' // Always fetch fresh data
   });
   
   if (!res.ok) {

@@ -1,7 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
-  trailingSlash: true,
+  // Dynamic rendering - fetches data at runtime
   images: {
     unoptimized: true
   },

@@ -7,6 +7,9 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { getPortfolioData } from "@/lib/api";
 
+// Force dynamic rendering - always fetch fresh data from API
+export const dynamic = 'force-dynamic';
+
 export default async function Home() {
   const data = await getPortfolioData();
 
