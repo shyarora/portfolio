@@ -193,7 +193,7 @@ const portfolioData = {
   contact: {
     email: "shyarora7@gmail.com",
     location: "Bengaluru, India",
-    availability: "Open to interesting opportunities and collaborations",
+    availability: "Open to open-source collaborations and interesting side projects",
     socialLinks: [
       { platform: "github", url: "https://github.com/shyarora", icon: "Github" },
       { platform: "linkedin", url: "https://linkedin.com/in/shyam-arora", icon: "Linkedin" },

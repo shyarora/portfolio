@@ -99,7 +99,7 @@ const Footer = () => {
                 <span className="text-dark-500">Status: </span>
                 <span className="inline-flex items-center gap-1.5">
                   <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                  <span className="text-green-400">Open to opportunities</span>
+                  <span className="text-green-400">Open to open-source collabs</span>
                 </span>
               </p>
             </div>
